@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Lab</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, serif; background: #f5f5f0; color: #1a1a1a; padding: 2rem; }
+    h1 { font-size: 2rem; margin-bottom: 2rem; color: #1a1a1a; }
+    .task { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .task h2 { font-size: 1rem; font-weight: bold; margin-bottom: 1rem; color: #333; }
+    input[type="text"], input[type="number"] {
+      border: 1px solid #ccc; border-radius: 4px; padding: 8px 12px;
+      font-size: 14px; margin-right: 8px; margin-bottom: 8px; width: 200px;
+    }
+    button {
+      padding: 8px 16px; background: #1a1a1a; color: #fff;
+      border: none; border-radius: 4px; cursor: pointer; font-size: 14px; margin-right: 6px;
+    }
+    button:hover { background: #444; }
+    p.netice { margin-top: 12px; font-size: 15px; color: #333; min-height: 20px; }
+    .counter-num { font-size: 3rem; font-weight: bold; margin: 12px 0; }
+    .console-box {
+      background: #1a1a1a; color: #4ade80; font-family: monospace;
+      font-size: 14px; padding: 12px; border-radius: 4px; margin-top: 12px; min-height: 40px;
+    }
+  </style>
+
+  </head>
+<body>
+ 
+  <h1>JavaScript Lab</h1>
+ 
+ 
+   <div class="task">
+    <h2>Tapşırıq 2 — Sadə kalkulyator (toplama və çıxma)</h2>
+    <input type="number" id="t2num1" placeholder="Birinci ədəd" />
+    <input type="number" id="t2num2" placeholder="İkinci ədəd" />
+    <br>
+    <button id="t2plus">+ Topla</button>
+    <button id="t2minus">− Çıx</button>
+    <p class="netice" id="t2netice"></p>
+  </div>
+
+  
+   <script>
+
+   document.getElementById('t2plus').addEventListener('click', function() {
+      var a = Number(document.getElementById('t2num1').value);
+      var b = Number(document.getElementById('t2num2').value);
+      document.getElementById('t2netice').textContent = 'Nəticə: ' + (a + b);
+    });
+
+    </script>
+ 
+</body>
+</html>
